@@ -199,14 +199,14 @@ if __name__ == "__main__":
                     running_best_mae.update(valid_mae_force)
                     if save_model:
                         msg = "epoch-%d, train_loss-%.4f, valid_mae_energy-%.4f, valid_mae_force-%.4f" \
-                        % (epoch, train_loss, valid_mae_energy, valid_mae_force)
+                        % (global_epoch, train_loss, valid_mae_energy, valid_mae_force)
                         print(msg)
                         torch.save(ema_helper.state_dict(), os.path.join(wandb.run.dir, "model.pt"))
                 else:
                     count = running_best_mae.counter()
                     if count > early_stop_epoch:
                         best_force_mae = running_best_mae.get_best()
-                        print(f"early stop in epoch {epoch}")
+                        print(f"early stop in epoch {global_epoch}")
                         print({'best_force_mae':best_force_mae})
                         break_flag = True
                         break
