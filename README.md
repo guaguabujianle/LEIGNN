@@ -43,7 +43,7 @@ To train LEIGNN, run:
 - `python train_ISO17.py --data_root /path/to/iso17 --num_workers 4` for ISO17.
 - `python train_MD.py --data_root /path/to/CH4 --systems CH4 --num_workers 4` for CH4.
 - `python train_MD.py --data_root /path/to/H2O --systems H2O --num_workers 4` for H2O.
-- 
+
 Replace `/path/to/` with your directory paths.
 
 ### Test the Model
