@@ -31,7 +31,7 @@ For logging, we recommend using wandb. More details are available at https://wan
 ## Step-by-Step Guide
 
 ### Data Preprocessing
-Download the data from [Zenodo](https://zenodo.org/record/8208800).
+Download the data from [Zenodo](https://zenodo.org/records/10208201).
 The downloaded data are preprocessed by default. If you wish to preprocess them from scratch, run:
 - `python preprocess_ISO17.py --data_root /path/to/iso17 --num_workers 8` for the ISO17 dataset.
 - `python preprocess_MD.py --data_root /path/to/CH4 --num_workers 8` for the CH4 dataset.
