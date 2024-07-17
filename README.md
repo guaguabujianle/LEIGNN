@@ -4,6 +4,7 @@
 We use ISO17, H2O, and CH4 as examples to illustrate how to use LEIGNN.
 
 - **ISO17 Dataset** [1]: Available at [ISO17](http://quantum-machine.org/datasets/).
+- **OC20 Dataset** [2]: Available at [OC20 (Train and Val)](https://zenodo.org/records/12508546) and [OC20 (Test)](https://zenodo.org/records/11375993).
 - **H2O and CH4 Datasets**: Available at [H2O and CH4](https://zenodo.org/records/10208201).
 
 ## Requirements
