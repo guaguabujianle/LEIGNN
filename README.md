@@ -6,6 +6,7 @@ We use ISO17, H2O, and CH4 as examples to illustrate how to use LEIGNN.
 - **ISO17 Dataset** [1]: Available at [ISO17](http://quantum-machine.org/datasets/).
 - **OC20 Dataset** [2]: Available at [OC20 (Train and Val)](https://zenodo.org/records/12508546) and [OC20 (Test)](https://zenodo.org/records/11375993).
 - **H2O and CH4 Datasets**: Available at [H2O and CH4](https://zenodo.org/records/10208201).
+- **LiPS**: Available at [LiPS](https://zenodo.org/records/7196767).
 
 ## Requirements
 Required Python packages include:  
@@ -31,11 +32,11 @@ For logging, we recommend using wandb. More details are available at https://wan
 ## Step-by-Step Guide
 
 ### Data Preprocessing
-Download the data from [Zenodo](https://zenodo.org/records/10208201).
+Download the data from [ISO17 + H2O + CH4](https://zenodo.org/records/10208201) and [OC20 (Train and Val)](https://zenodo.org/records/12508546) and [OC20 (Test)](https://zenodo.org/records/11375993).
 The downloaded data are preprocessed by default. If you wish to preprocess them from scratch, run:
-- `python preprocess_ISO17.py --data_root /path/to/iso17 --num_workers 8` for the ISO17 dataset.
-- `python preprocess_MD.py --data_root /path/to/CH4 --num_workers 8` for the CH4 dataset.
-- `python preprocess_MD.py --data_root /path/to/H2O --num_workers 8` for the H2O dataset.
+- `python preprocess_iso17.py --data_root /path/to/iso17 --num_workers 8` for the ISO17 dataset.
+- `python preprocess_md.py --data_root /path/to/CH4 --num_workers 8` for the CH4 dataset.
+- `python preprocess_md.py --data_root /path/to/H2O --num_workers 8` for the H2O dataset.
 
 Replace `/path/to/` with your directory paths.
 
