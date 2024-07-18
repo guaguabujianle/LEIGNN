@@ -32,7 +32,7 @@ For logging, we recommend using wandb. More details are available at https://wan
 ## Step-by-Step Guide
 
 ### Data Preprocessing
-Download the data from [ISO17 + H2O + CH4](https://zenodo.org/records/10208201) and [OC20 (Train and Val)](https://zenodo.org/records/12508546) and [OC20 (Test)](https://zenodo.org/records/11375993).
+Download the data from [ISO17 + H2O + CH4](https://zenodo.org/records/10208201), [OC20 (Train and Val)](https://zenodo.org/records/12508546), [OC20 (Test)](https://zenodo.org/records/11375993) and [LiPS](https://zenodo.org/records/7196767).
 The downloaded data are preprocessed by default. If you wish to preprocess them from scratch, run:
 - `python preprocess_iso17.py --data_root /path/to/iso17 --num_workers 8` for the ISO17 dataset.
 - `python preprocess_md.py --data_root /path/to/CH4 --num_workers 8` for the CH4 dataset.
@@ -42,11 +42,20 @@ Replace `/path/to/` with your directory paths.
 
 ### Train the Model
 To train LEIGNN, run:
-- `python train_ISO17.py --data_root /path/to/iso17 --num_workers 4` for ISO17.
-- `python train_MD.py --data_root /path/to/CH4 --systems CH4 --num_workers 4` for CH4.
-- `python train_MD.py --data_root /path/to/H2O --systems H2O --num_workers 4` for H2O.
+- `python train_iso17.py --data_root /path/to/iso17 --num_workers 4` for ISO17.
+- `python train_oc20.py --data_root /path/to/oc20/200k --data_type 50K --model_type leignn --num_workers 4 --batch_size 32` for OC20-50K and `python train_oc20.py --data_root /path/to/oc20/200k --data_type 200K --model_type leignn --num_workers 4 --batch_size 32` for OC20-200K.
+- `python train_md.py --data_root /path/to/CH4 --systems CH4 --num_workers 4` for CH4.
+- `python train_md.py --data_root /path/to/H2O --systems H2O --num_workers 4` for H2O.
 
 Replace `/path/to/` with your directory paths.
+
+### Ablation study
+Run:
+- `python train_oc20.py --data_root /path/to/oc20/200k --data_type 50K --model_type vanilla --num_workers 4 --batch_size 32` for OC20-50K and `python train_oc20.py --data_root /path/to/oc20/200k --data_type 200K --model_type leignn --num_workers 4 --batch_size 32` for Vanilla.
+- `python train_oc20.py --data_root /path/to/oc20/200k --data_type 50K --model_type vanilla_nmu --num_workers 4 --batch_size 32` for OC20-50K and `python train_oc20.py --data_root /path/to/oc20/200k --data_type 200K --model_type leignn --num_workers 4 --batch_size 32` for Vanilla + NMU.
+
+
+
 
 ### Test the Model
 To test LEIGNN on ISO17, run:
