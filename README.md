@@ -75,7 +75,7 @@ Evaluate and visualize MD simulation results using `performance_H2O.ipynb`.
 - `python simulate_md.py --data_root /path/to/CH4 --model_dir ./wandb/run-20231124_233309-LEIGNN_CH4_20231124_233308`
 Evaluate and visualize MD simulation results using `performance_CH4.ipynb`.
 
-#### CH4
+#### LiPS
 - `python simulate_lips.py --data_root /path/to/lips/20k --model_dir ./wandb/run-20240717_202344-LEIGNN_LiPS_20240717_202343`  
 Evaluate and visualize MD simulation results using `performance_lips.py`.
 
