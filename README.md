@@ -56,11 +56,11 @@ To perform the ablation study, use the following commands:
 
 To test the case for 200K, simply replace --data_type 50K with --data_type 200K in the commands above.
 
-
-
 ### Test the Model
 To test LEIGNN on ISO17, run:
-- `python test_ISO17.py --data_root /path/to/iso17 --model_dir ./wandb/run-20231031_144315-LEIGNN_20231031_144314/`
+- `python test_iso17.py --data_root /path/to/iso17 --model_dir ./wandb/run-20231031_144315-LEIGNN_20231031_144314/`
+To test LEIGNN on oc20, run:
+- `python test_oc20.py --data_root /path/to/oc20/200k --data_type 50K --model_dir ./wandb/run-20231031_144315-LEIGNN_20231031_144314/ --model_type leignn --batch_size 32`
 
 Replace `/path/to/` and `./wandb/run-20231031_144315-LEIGNN_20231031_144314/` with your directory path.
 
