@@ -50,10 +50,11 @@ To train LEIGNN, run:
 Replace `/path/to/` with your directory paths.
 
 ### Ablation study
-Run:
+To perform the ablation study, use the following commands:
 - `python train_oc20.py --data_root /path/to/oc20/200k --data_type 50K --model_type vanilla --num_workers 4 --batch_size 32` for OC20-50K and `python train_oc20.py --data_root /path/to/oc20/200k --data_type 200K --model_type leignn --num_workers 4 --batch_size 32` for Vanilla.
 - `python train_oc20.py --data_root /path/to/oc20/200k --data_type 50K --model_type vanilla_nmu --num_workers 4 --batch_size 32` for OC20-50K and `python train_oc20.py --data_root /path/to/oc20/200k --data_type 200K --model_type leignn --num_workers 4 --batch_size 32` for Vanilla + NMU.
 
+To test the case for 200K, simply replace --data_type 50K with --data_type 200K in the commands above.
 
 
 
