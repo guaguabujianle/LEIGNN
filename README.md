@@ -65,10 +65,19 @@ To test LEIGNN on oc20, run:
 Replace `/path/to/` and `./wandb/run-20231031_144315-LEIGNN_20231031_144314/` with your directory path.
 
 ### MD Simulations
-After training LEIGNN on the CH4 dataset, run MD simulations with:
-- `python simulate.py --data_root /path/to/ch4 --model_dir ./wandb/run-20231124_233309-LEIGNN_CH4_20231124_233308`
-Replace `/path/to/` and `./wandb/run-20231124_233309-LEIGNN_CH4_20231124_233308` with your directory path.
+After training LEIGNN on the LiPS, H2O, and CH4 datasets, run MD simulations with the following commands:
+#### H20
+- `python simulate_md.py --data_root /path/to/H2O --model_dir ./wandb/run-20231124_233309-LEIGNN_H2O_20231124_233308`
+Replace `/path/to/` and `./wandb/run-20231124_233309-LEIGNN_H2O_20231124_233308` with your directory path.  
+Evaluate and visualize MD simulation results using `performance_H2O.ipynb`.
+
+#### CH4
+- `python simulate_md.py --data_root /path/to/CH4 --model_dir ./wandb/run-20231124_233309-LEIGNN_CH4_20231124_233308`
 Evaluate and visualize MD simulation results using `performance_CH4.ipynb`.
+
+#### CH4
+- `python simulate_lips.py --data_root /path/to/lips/20k --model_dir ./wandb/run-20240717_202344-LEIGNN_LiPS_20240717_202343`  
+Evaluate and visualize MD simulation results using `performance_lips.py`.
 
 ## Acknowledgements
 Some part of code in this project were adapted from [OCP](https://github.com/Open-Catalyst-Project/ocp) and [MDsim](https://github.com/kyonofx/MDsim). We gratefully acknowledge the contributions from these sources.
